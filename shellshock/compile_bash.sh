@@ -13,7 +13,7 @@ BASH_PATCH_LEVEL="27"
 mkdir -p "$WORKDIR"; cd "$WORKDIR"
 
 wget -q "$BASH_FTP_ROOT/bash-${BASH_VER}.tar.gz" -O - | tar zx
-cd bash-4.3
+cd "bash-$BASH_VER"
 
 # Download patchset
 for i in $(seq -f "%03g" 0 $BASH_PATCH_LEVEL); do

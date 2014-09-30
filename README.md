@@ -7,9 +7,6 @@ compile bash on systems with no update available.
 
 Works for us on old ubuntu/debian.
 
-Bash install script from:
-http://askubuntu.com/questions/528101/what-is-the-cve-2014-6271-bash-vulnerability-and-how-do-i-fix-it
-
 Usage
 =====
 
@@ -36,6 +33,10 @@ bonus: Test shellshock from salt:
 
 https://twitter.com/johan_moreau/status/515226448270213121
 
+```sh
+$ sudo salt -G 'kernel:Linux' cmd.run "env x='() { :;}; echo vulnerable' bash -c ':' 2>&1 | grep vulnerable"
 ```
-$ sudo salt -G 'kernel:Linux' cmd.run "env x='() { :;}; echo __bad' bash -c 'echo __good' 2>&1 |grep __"
+or
+```sh
+$ sudo salt -G 'kernel:Linux' cmd.retcode "env x='() { :;}; echo vulnerable' bash -c ':' 2>&1 | grep vulnerable"
 ```

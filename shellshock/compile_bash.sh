@@ -1,6 +1,7 @@
 #!/bin/bash
 ##
 ## Manually compile and install bash
+## ~ Trevor Joynson (trevorj) <github@skywww.net>
 ##
 set -e
 

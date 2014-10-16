@@ -1,4 +1,8 @@
 #!/bin/bash
+##
+## Install trusty bash deb
+## ~ Trevor Joynson (trevorj) <github@skywww.net>
+##
 set -e
 
 WORKDIR="/tmp"
